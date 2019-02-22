@@ -1,0 +1,52 @@
+@font-face{
+    font-family: 'NANUMSQUARER';
+    src: url(/fonts/NANUMSQUARER.TTF) format('truetype');
+}
+
+.container-1{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative;
+    float: right;
+}
+
+.container-1 input#search{
+    width: 300px;
+    height: 53px;
+    background: #f7f7f7;
+    border: none;
+    font-size: 12pt;
+    font-family: 'NANUMSQUARER';
+    float: left;
+    color: #73767d;
+    padding-left: 45px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 40px;
+}
+
+.container-1 input#search::-webkit-input-placeholder {
+    color: #65737e;
+}
+ 
+.container-1 input#search:-moz-placeholder { /* Firefox 18- */
+   color: #65737e;  
+}
+ 
+.container-1 input#search::-moz-placeholder {  /* Firefox 19+ */
+   color: #65737e;  
+}
+ 
+.container-1 input#search:-ms-input-placeholder {  
+   color: #65737e;  
+}
+
+.container-1 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: -9px;
+    z-index: 1;
+    color: #4f5b66;
+}

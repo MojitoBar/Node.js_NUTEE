@@ -1,0 +1,194 @@
+doctype html
+html
+    head
+        title
+            |NUTEE
+        meta(charset='utf-8')
+        link(rel="stylesheet", href="/css/index.css")
+    body
+        div(class='__header')
+            div(class='__headerThum')
+                a(href="/index")
+                    img(src="/image/nutee_icon.png")
+            div(class='__headericon')
+                a(href="/index/0/0")
+                    img(src="/image/notification.png", style= color[0])
+            div(class='__headericon')
+                a(href="/index/1/0")
+                    img(src="/image/file.png", style= color[1])
+            div(class='__headericon')
+                a(href="/index/2/0")
+                    img(src="/image/magic-wand.png", style= color[2])
+            div(class='__headericon')
+                a(href="/index/3/0")
+                    img(src="/image/paper-plane.png", style= color[3])
+            div
+                a(href="")
+                    img(class='__headerQuestion' src="/image/question.png")
+                a(href="")
+                    img(class='__headerMaking' src="/image/Making.png")
+            
+        div(class='__header_detail')
+            p(class='__header_title')
+                |NUTEE
+            div(class='__header_pages')
+                =context
+            div
+                -for(var i=0; i<list.length; i++)
+                    -if(i == id)
+                        p(class='__header_list')
+                            button(class='__header_list_current' onClick="location.href='/index/#{number}/#{i}'")
+                                =list[i]
+                    -else
+                        p(class='__header_list')
+                            button(class='b01_simple_rollover' onClick="location.href='/index/#{number}/#{i}'")
+                                =list[i]
+        div(class='__body')
+            p(class='__body_title')
+                =context
+            p(class='__body_user')
+                span
+                    |Nutee_Admin
+            img(class='__body_user_icon' src="/image/user.png", alt="")
+            p(class='__body_user')
+                span
+                    |Logout
+        div(class='__article')
+            div(class='__post')
+                span
+                    |최근 게시물
+                table(class='__notice_table' style='table-layout: fixed;')
+                    tr
+                        th(style='width: 10%')
+                            |ID
+                        th(style='width: 15%')
+                            |Status
+                        th(style='width: 50%')
+                            |Title
+                        th(style='width: 25%')
+                            |Date
+                    tr
+                        td(style='width: 10%')
+                            |12
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td(style='width: 25%')
+                            |2019-01-09
+
+                    tr
+                        td(style='width: 10%')
+                            |13
+                        td(style='width: 15%; color: #ca4cca')
+                            |고백
+                        td(style='width: 50%')
+                            |지금은 하나하나 노가다 했지만
+                        td(style='width: 25%')
+                            |2019-01-09
+
+                    tr
+                        td(style='width: 10%')
+                            |14
+                        td(style='width: 15%; color: #88bf88')
+                            |홍보
+                        td(style='width: 50%')
+                            |나중엔 json받아온걸 for문으로 돌리면
+                        td(style='width: 25%')
+                            |2019-01-09
+
+                    tr
+                        td(style='width: 10%')
+                            |15
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |깔끔하겠지?
+                        td(style='width: 25%')
+                            |2019-01-09
+            div(class='__notice')
+                span
+                    |최근 공지사항
+                table(class='__notice_table' style='table-layout: fixed;')
+                    tr
+                        th(style='width: 10%')
+                            |ID
+                        th(style='width: 15%')
+                            |Status
+                        th(style='width: 50%')
+                            |Title
+                        th(style='width: 25%')
+                            |Date
+                    tr
+                        td(style='width: 10%')
+                            |4
+                        td(style='width: 15%; color: #ff6a6a')
+                            |[누티]
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td(style='width: 25%')
+                            |2019-01-09
+
+                    tr
+                        td(style='width: 10%')
+                            |5
+                        td(style='width: 15%; color: #ff6a6a')
+                            |[누티]
+                        td(style='width: 50%')
+                            |지금은 하나하나 노가다 했지만
+                        td(style='width: 25%')
+                            |2019-01-09
+
+                    tr
+                        td(style='width: 10%')
+                            |6
+                        td(style='width: 15%; color: #88bf88')
+                            |[총학]
+                        td(style='width: 50%')
+                            |나중엔 json받아온걸 for문으로 돌리면
+                        td(style='width: 25%')
+                            |2019-01-09
+
+                    tr
+                        td(style='width: 10%')
+                            |7
+                        td(style='width: 15%; color: #ff6a6a')
+                            |[누티]
+                        td(style='width: 50%')
+                            |깔끔하겠지?
+                        td(style='width: 25%')
+                            |2019-01-09
+            div(class='__calendar')
+                span
+                    |학사일정
+                table(class='__calendar_table' id='tab')
+                    tr
+                        td(class='__calendar_date' colspan='7' id='ymd')
+                    tr
+                        td(style='color:#ff3b3b')
+                            |Sun
+                        td
+                            |Mon
+                        td
+                            |Tue
+                        td
+                            |Wed
+                        td
+                            |Thu
+                        td
+                            |Fri
+                        td(style='color:#5454ff')
+                            |Sat
+            div(class='dumy')
+                div(id='__schedule' class='__schedule')
+
+            div(class='__caffetteria')
+                span
+                    |오늘의 메뉴
+                div(class='__caffetteria_table')
+                    div(id='__caffetteria_a' class='__caffetteria_a')
+                    div(id='__caffetteria_b' class='__caffetteria_b')
+                    div(id='__caffetteria_c' class='__caffetteria_c')
+    //- script place
+    script(src="/js/caffetteria.js")
+    script(src="/js/calendar.js")

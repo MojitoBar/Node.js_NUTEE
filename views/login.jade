@@ -1,0 +1,77 @@
+doctype html
+html
+    head
+        title
+            |NUTEE
+        meta(charset='utf-8')
+        link(rel="stylesheet", href="/css/index.css")
+        link(rel="stylesheet", href="/css/search.css")
+        link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet")
+    body
+        div(class='__header')
+            div(class='__headerThum')
+                a(href="/index")
+                    img(src="/image/nutee_icon.png")
+            div(class='__headericon')
+                a(href="/index/0/0")
+                    img(src="/image/notification.png", style= color[0])
+            div(class='__headericon')
+                a(href="/index/1/0")
+                    img(src="/image/file.png", style= color[1])
+            div(class='__headericon')
+                a(href="/index/2/0")
+                    img(src="/image/magic-wand.png", style= color[2])
+            div(class='__headericon')
+                a(href="/index/3/0")
+                    img(src="/image/paper-plane.png", style= color[3])
+            div
+                a(href="")
+                    img(class='__headerQuestion' src="/image/question.png")
+                a(href="")
+                    img(class='__headerMaking' src="/image/Making.png")
+            
+        div(class='__header_detail')
+            p(class='__header_title')
+                |NUTEE
+            div(class='__header_pages')
+                =context
+            div
+                -for(var i=0; i<list.length; i++)
+                    -if(i == id)
+                        p(class='__header_list')
+                            button(class='__header_list_current' onClick="location.href='/index/#{number}/#{i}'")
+                                =list[i]
+                    -else
+                        p(class='__header_list')
+                            button(class='b01_simple_rollover' onClick="location.href='/index/#{number}/#{i}'")
+                                =list[i]
+        div(class='__body')
+            p(class='__body_title')
+                =context
+            p(class='__body_user')
+                span
+                    |Nutee_Admin
+            img(class='__body_user_icon' src="/image/user.png", alt="")
+            p(class='__body_user')
+                span
+                    |Logout
+        div(class="__login_div")
+            form(class="__login_form" action="/index", method="get")
+                img(src="/image/user.png", alt="")
+                p
+                    |Log in
+                div(class="__lable")
+                    |ID
+                br
+                input(name="id" type="text" placeholder="id")
+                br
+                //- input(name="nickname" type="text" placeholder="nickname")
+                div(class="__lable")
+                    |PASSWORD
+                br
+                input(name="password" type="password" placeholder="password")
+                //- input(name="password_confirm" type="password" placeholder="password_confirm")
+                br
+                button(class="__login_submit" type="submit")
+                    |Log in
+        

@@ -1,0 +1,203 @@
+doctype html
+html
+    head
+        title
+            |NUTEE
+        meta(charset='utf-8')
+        link(rel="stylesheet", href="/css/index.css")
+        link(rel="stylesheet", href="/css/search.css")
+        link(href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet")
+    body
+        div(class='__header')
+            div(class='__headerThum')
+                a(href="/index")
+                    img(src="/image/nutee_icon.png")
+            div(class='__headericon')
+                a(href="/index/0/0")
+                    img(src="/image/notification.png", style= color[0])
+            div(class='__headericon')
+                a(href="/index/1/0")
+                    img(src="/image/file.png", style= color[1])
+            div(class='__headericon')
+                a(href="/index/2/0")
+                    img(src="/image/magic-wand.png", style= color[2])
+            div(class='__headericon')
+                a(href="/index/3/0")
+                    img(src="/image/paper-plane.png", style= color[3])
+            div
+                a(href="")
+                    img(class='__headerQuestion' src="/image/question.png")
+                a(href="")
+                    img(class='__headerMaking' src="/image/Making.png")
+            
+        div(class='__header_detail')
+            p(class='__header_title')
+                |NUTEE
+            div(class='__header_pages')
+                =context
+            div
+                -for(var i=0; i<list.length; i++)
+                    -if(i == id)
+                        p(class='__header_list')
+                            button(class='__header_list_current' onClick="location.href='/index/#{number}/#{i}'")
+                                =list[i]
+                    -else
+                        p(class='__header_list')
+                            button(class='b01_simple_rollover' onClick="location.href='/index/#{number}/#{i}'")
+                                =list[i]
+        div(class='__body')
+            p(class='__body_title')
+                =context
+            p(class='__body_user')
+                span
+                    |Nutee_Admin
+            img(class='__body_user_icon' src="/image/user.png", alt="")
+            p(class='__body_user')
+                span
+                    |Logout
+
+        
+
+        div(class='__article')
+            div(class='__board')
+                div(class='box')
+                    div(class='container-1')
+                        span(class='icon')
+                            i(class='fa fa-search')
+                        input(type="search" id="search" placeholder="Search...")
+
+                div(class='__write_post')
+                    img(class='__write_post_img' src="/image/file.png", alt="")
+                    p(class="__write_post_text")
+                        a(href="/index/write_page")
+                            |글쓰기
+
+                table(class='__board_table' style='table-layout: fixed;')
+                    tr
+                        th(style='width: 6%')
+                            |ID
+                        th(style='width: 10%')
+                            |Status
+                        th(style='width: 40%')
+                            |Title
+                        th(style='width: 10%')
+                            |Writer
+                        th(style='width: 15%')
+                            |Date
+                        th(style='width: 10%')
+                            |Like
+                    tr
+                        td(style='width: 10%')
+                            |12
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |6
+
+                    tr
+                        td(style='width: 10%')
+                            |13
+                        td(style='width: 15%; color: #ca4cca')
+                            |고백
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |53
+
+                    tr
+                        td(style='width: 10%')
+                            |14
+                        td(style='width: 15%; color: #88bf88')
+                            |홍보
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |212
+
+                    tr
+                        td(style='width: 10%')
+                            |15
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |4
+                    
+                    tr
+                        td(style='width: 10%')
+                            |15
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |4
+
+                    tr
+                        td(style='width: 10%')
+                            |15
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |34
+                    
+                    tr
+                        td(style='width: 10%')
+                            |15
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |1
+
+                    tr
+                        td(style='width: 10%')
+                            |15
+                        td(style='width: 15%; color: #ff6a6a')
+                            |자유
+                        td(style='width: 50%')
+                            |테스트테스트테스트테스트테스트테스트123123123123123123122
+                        td
+                            |Nutee_Admin
+                        td(style='width: 25%')
+                            |2019-01-09
+                        td(style='color: #ff617d')
+                            |35
+        div(class="__pagination")
+            div(class="__dot")
+            div(class="__dot")
+            div(class="__dot")

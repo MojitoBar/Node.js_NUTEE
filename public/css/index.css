@@ -1,0 +1,748 @@
+@font-face{
+    font-family: 'NANUMSQUARER';
+    src: url(/fonts/NANUMSQUARER.TTF) format('truetype');
+}
+
+body{
+    margin: 0px;
+    font-family: 'NANUMSQUARER';
+    background-color: #ececec;
+}
+
+span{
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    color: #444444c5;
+}
+
+h3, h4{
+    margin: 0px;
+}
+
+.__headerQuestion{
+    position: fixed;
+    width: 1.4rem;
+    height: 1.4rem;
+    bottom: 5rem;
+    left: 1.7rem;
+}
+
+.__headerMaking{
+    position: fixed;
+    width: 2.5rem;
+    height: 2.5rem;
+    bottom: 1.3rem;
+    left: 1.5rem;
+    -webkit-filter: grayscale(1) brightness(1.5);
+}
+
+.__headerThum{
+    padding-top: 1.5rem;
+    margin-bottom: 2.6rem;
+}
+
+.__headerThum img{
+    width: 3.4rem;
+    height: 3.4rem;
+}
+
+.__headerText{
+    padding-top: 1%;
+}
+
+.__headericon{
+    margin-bottom: 2.7rem;
+}
+
+.__headericon img{
+    -webkit-filter: grayscale(1) brightness(0.7);
+    width: 1.8rem;
+    height: 1.8rem;
+}
+
+.__header{
+    padding-left: 1.3rem;
+    padding-right: 1.1rem;
+    float: left;
+    text-align: center;
+    height: 100vh;
+    background-color: #f8f8f8
+}
+
+.__header_detail{
+    width: 12rem;
+    float: left;
+    font-weight: bold;
+    height: 100vh;
+    background-color: #f8f8f8;
+    border: 0px solid #333;
+    -webkit-box-shadow: inset -3px 0 20px -9px #888;
+            box-shadow: inset -3px 0 20px -9px #888;
+}
+
+.__header_pages{
+    margin-top: 2.3rem;
+    margin-bottom: 2rem;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-left: 0.6rem;
+    color: #707070;
+}
+
+.__header_list{
+    font-weight: 100;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.__header_list_current{
+    border: #000000 solid 0px;
+    border-radius: 0.25rem;
+    padding: 0.6rem;
+    color: #f8f8f8;
+    background-color: #07cea3c5;
+}
+
+.__header_list button{
+    width: 95%;
+    text-align: left;
+}
+
+.__header_title{
+    margin: 0px;
+    padding-top: 3rem;
+    padding-left: 0.6rem;
+    color: #707070;
+}
+
+.b01_simple_rollover {
+    color: #707070;
+    border: #000000 solid 0px;
+    border-radius: 0.25rem;
+    padding: 0.6rem;
+    background-color: #f8f8f8;
+}
+
+.b01_simple_rollover:hover {
+    color: #666666;
+    background-color: #cdf0e8c5;
+}
+
+button:focus {
+    outline: 0;
+}
+
+/* body css */
+.__body{
+    height: 3.5rem;
+    overflow: auto;
+    background-color: #fafafa;
+    box-shadow: 0px 3px 8px 0 #e2e2e2
+}
+
+.__body_title, .__body_user{
+    padding-top: 3px;
+}
+
+.__body_title{
+    float: left;
+    margin-left: 1rem;
+    font-weight: bold;
+}
+
+.__body_user{
+    float: right;
+    color: #6b6b6b
+}
+
+.__body_user_icon{
+    float: right;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: 0.8rem;
+    margin-right: 0.3rem;
+    margin-left: 0.3rem;
+    border: 1.5px solid #a3f0dec5;
+    border-radius: 100%;
+    padding: 1px;
+}
+
+.__body_user span{
+    margin-right: 1rem;
+}
+
+
+/* __article */
+.__article{
+}
+
+/* 최근 게시물 css */
+.__post{
+    float: right;
+    width: 35%;
+    margin: auto;
+    margin-top: 2%;
+    margin-right: 3.5%;
+}
+
+/* 최근 공지 css */
+.__notice{
+    float: left;
+    width: 35%;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 3.5%;
+}
+
+.__notice_default{
+    margin-top: 1rem;
+    height: 3rem;
+    background-color: #f7f7f7;
+}
+
+.__notice_table {
+    width: 100%;
+    text-align: left;
+    margin-top: 1rem;
+    border-spacing: 0 10px;
+}
+
+.__notice_table tr{
+    background: #f7f7f7;
+}
+
+td:first-child, th:first-child {
+    border-top-left-radius: 5px; 
+    border-bottom-left-radius: 5px;
+}
+td:last-child, th:last-child {
+    border-bottom-right-radius: 5px; 
+    border-top-right-radius: 5px; 
+}
+
+.__notice_table th {
+    padding: 10px;
+    font-weight: bold;
+    vertical-align: top;
+    width: 25%;
+}
+.__notice_table td {
+    padding: 10px;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #666666;
+}
+
+/* calendar css */
+.__calendar_date{
+    padding-top: 6%;
+}
+
+.__calendar{
+    float: left;
+    margin-left: 3.5%;
+    margin-top: 2%;
+}
+
+.__calendar td{
+    /* radius를 위해 */
+    padding-top: 3.5%;
+    padding-bottom: 3.5%;
+    font-size: 0.8rem;
+    font-weight: bold;
+    width: 37px;
+    color: #666666;
+}
+
+.__calendar_table{
+    border-spacing: 11px;
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* schedule css */
+.__schedule{
+    float: left;
+    margin: 1.5rem 1.5rem 0 3rem;
+    border-left: 2px solid #e0e0e0;
+    color: #666666;
+}
+
+.__schedule_right, .__schedule_circle{
+    float: left;
+}
+
+.__schedule p{
+    margin: 0;
+    margin-bottom: 3px;
+}
+
+.__schedule_circle{
+    position: relative;
+    right: 8.5px;
+    width: 1rem;
+    height: 1rem;
+    border-radius: 100%;
+    margin-top: 4.5%;
+}
+
+.__schedule_right{
+    margin-left: 1rem;
+}
+
+.__schedule_item{
+    height: 3rem;
+    margin-top: 2.3rem;
+}
+
+.__schedule_content{
+    font-weight: bold;
+}
+
+::-webkit-scrollbar { 
+    display: none; 
+}
+
+.dumy{
+    margin-top: 2rem;
+    height: 24rem;
+    overflow: scroll;
+    float: left;
+    width: auto;
+}
+
+/* caffetteria */
+.__caffetteria{
+    margin-top: 2%;
+    margin-right: 3.5%;
+    float: right;
+}
+
+.__caffetteria_table{
+    border-radius: 5px;
+    background-color: #f7f7f7;
+    width: 27rem;
+    height: 22rem;
+    margin-top: 1rem;
+}
+
+.__caffetteria_a, .__caffetteria_b, .__caffetteria_c{
+    padding: 1rem;
+    height: 20rem;
+    width: 7rem;
+    float: left;
+    margin: 0;
+    font-family: 'NANUMSQUARER';
+    font-weight: bold;
+    text-align: center;
+    color: #666666;
+}
+
+
+.__board{
+    float: left;
+    width: 70%;
+    margin: auto;
+    margin-top: 2%;
+    margin-left: 4%;
+}
+
+.__board table tr td{
+    padding: 15px;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #666666;
+}
+
+.__board_table {
+    width: 100%;
+    text-align: left;
+    border-spacing: 0 15px;
+}
+
+.__board_table tr{
+    background: #f7f7f7;
+}
+
+.__board_table th {
+    padding: 15px;
+    font-weight: bold;
+    vertical-align: top;
+    width: 25%;
+}
+.__board_table td {
+    padding: 15px;
+    vertical-align: top;
+    overflow: hidden;
+    white-space: nowrap; 
+    text-overflow: ellipsis;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #666666;
+}
+
+/* pagination */
+.__pagination{
+    width: 30%;
+    margin-left: 40%;
+    margin-top: 44.5%;
+    text-align: center;
+}
+
+.__dot{
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    background-color: #07cea3c5;
+    border-radius: 100%;
+    margin-left: 50px;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px 0px #9b9b9b;
+}
+
+
+/* write_post */
+.__write_post_img{
+    padding-top: 15px;
+    padding-left: 11px;
+    padding-right: 8px;
+    width: 20px;
+    float: left;
+}
+
+.__write_post_text{
+    float: left;
+    line-height: 1px;
+    padding-top: 10px;
+}
+
+.__write_post{
+    width: 100px;
+    height: 50px;
+    background-color: #f7f7f7;
+    border-radius: 40px;
+}
+
+
+
+/* login page */
+.__login_form{
+    margin-left: 44%;
+    margin-top: -4%;
+    width: 400px;
+    height: 500px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 6px 0px #bebebe;
+}
+.__login_form input{
+    width: 70%;
+    height: 40px;
+    border: 1px solid rgb(221, 221, 221);
+    padding-left: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.__login_form p{
+    margin: 0;
+    font-size: 1.8rem;
+    color: #07cea3c5;
+    font-weight: bold;
+}
+
+.__login_title{
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.__login_div img{
+    width: 130px;
+    text-align: center;
+}
+
+.__login_div{
+    margin-top: 10%;
+}
+
+.__lable{
+    margin-left: 3.7rem;
+    text-align: left;
+    margin-top: 4%;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.__login_submit{
+    width: 70%;
+    background-color: #07cea3c5;
+    border-radius: 50px;
+    height: 50px;
+    margin-top: 2rem;
+    border: 0px;
+    color: #f7f7f7;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+/* sign in page */
+
+.__sign_form{
+    margin-left: 44%;
+    margin-top: -4%;
+    width: 400px;
+    height: 500px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 2px 2px 6px 0px #bebebe;
+}
+.__sign_form input{
+    width: 70%;
+    height: 40px;
+    border: 1px solid rgb(221, 221, 221);
+    padding-left: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
+.__sign_form p{
+    margin: 0;
+    font-size: 1.8rem;
+    color: #07cea3c5;
+    font-weight: bold;
+    padding-top: 1rem;
+}
+
+.__sign_title{
+    text-align: center;
+    margin: auto;
+    margin-top: 5%;
+}
+
+.__sign_div img{
+    width: 130px;
+    text-align: center;
+}
+
+.__sign_div{
+    margin-top: 10%;
+}
+
+.__sign_submit{
+    width: 70%;
+    background-color: #07cea3c5;
+    border-radius: 50px;
+    height: 50px;
+    margin-top: 2rem;
+    border: 0px;
+    color: #f7f7f7;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+/* write */
+.__write{
+    margin-left: 23%;
+    margin-top: 2rem;
+    width: 70%;
+    height: 82vh;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.__write form{
+    padding-top: 20px;
+    margin-left: 20px;
+}
+
+.__write select{
+    width: 4rem;
+    height: 2.2rem;
+}
+
+.__write .__file{
+    border: 0px;
+    border-radius: 0px;
+    margin-top: 10px;
+}
+
+.__write select, input{
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.__write .__title{
+    height: 2rem;
+    width: 78%;
+    padding-left: 5px;
+    font-family: unset;
+}
+
+.__write label{
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0px;
+    width: 80px;
+}
+
+.__write textarea{
+    padding: 10px;
+    margin-top: 20px;
+    margin-left: 10px;
+    border: 1px solid rgb(214, 214, 214);
+    width: 94%;
+    height: 56vh;
+    font-size: 1.3rem;
+    font-family: unset;
+    border-radius: 5px;
+}
+
+.__write button{
+    float: right;
+    margin-top: 1%;
+    margin-right: 5%;
+    border-radius: 20px;
+    border: 0px;
+    background-color: #07cea3c5;
+    height: 40px;
+    width: 100px;
+    color: #f7f7f7;
+    font-family: unset;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+/* notice_view */
+
+.__notice_view{
+    margin-left: 23%;
+    margin-top: 2rem;
+    width: 70%;
+    height: 400px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+}
+
+.__notice_view form{
+    padding-top: 20px;
+    margin-left: 30px;
+}
+
+.__notice_view select{
+    width: 4rem;
+    height: 2.2rem;
+}
+
+.__notice_view .__file{
+    border: 0px;
+    border-radius: 0px;
+    margin-top: 10px;
+}
+
+.__notice_view select, input{
+    margin-left: 10px;
+    border-radius: 20px;
+    border: 1px solid rgb(214, 214, 214);
+}
+
+.__notice_view .__title{
+    height: 2rem;
+    width: 78%;
+    padding-left: 5px;
+    font-family: unset;
+}
+
+.__notice_view label{
+    padding-top: 5px;
+    padding-left: 10px;
+    margin: 0px;
+    width: 80px;
+}
+
+.__notice_view .__content{
+    margin-top: 2rem;
+}
+
+.__notice_view .__state p{
+    float: left;
+    padding-top: 240px;
+    margin-right: 2rem;
+}
+
+.__notice_coment{
+    margin-left: 23%;
+    margin-top: 2rem;
+    width: 70%;
+    padding-bottom: 10px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    padding-top: 1rem;
+}
+
+.__notice_coment span{
+    padding: 10px;
+}
+
+.__notice_coment p{
+    margin: 0px;
+    margin-top: 5px;
+    margin-left: 10px;
+}
+
+.__notice_coment div{
+    padding-top: 5px;
+    padding-left: 10px;
+    margin-bottom: 10px;
+}
+
+.__notice_coment_add{
+    margin-left: 23%;
+    width: 70%;
+    padding-bottom: 10px;
+    padding-top: 1rem;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.__notice_coment_add textarea{
+    width: 85%;
+    height: 60px;
+    padding-left: 10px;
+    font-family: unset;
+    font-size: 1.1rem;
+    border-radius: 10px;
+    border: 0px;
+    padding-top: 5px;
+}
+
+.__notice_coment_add button{
+    height: 65px;
+    width: 100px;
+    border-radius: 10px;
+    background-color: #07cea3c5;
+    border: 0px;
+    float: right;
+    font-size: 1.1rem;
+    font-family: unset;
+    color: #f7f7f7;
+    font-weight: bold;
+}
